@@ -1,9 +1,12 @@
 import React from "react";
 import "./menu-item.styles.scss";
 
-const MenuItem = ({ title, imageUrl, size }) => {
+// HOC that takes a component and returns a modified component 
+import { withRouter } from 'react-router-dom'; 
+
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   return (
-    <div className={`${size} menu-item`}>
+    <div className={`${size} menu-item`} onClick={()=> history.push(`${match.url}${linkUrl}`) }>
       <div
         className="background-image"
         style={{ backgroundImage: `url(${imageUrl})` }}
@@ -16,4 +19,5 @@ const MenuItem = ({ title, imageUrl, size }) => {
   );
 };
 
-export default MenuItem;
+// withRouter will return menuItem with history + other props
+export default withRouter(MenuItem);
