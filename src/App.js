@@ -15,22 +15,34 @@ class App extends React.Component {
     this.state = {
       currentUser: null,
     };
-  };
+  }
 
   // Needed to unsub from subscriber and avoid memory leaks
   unsubscribeFromAuth = null;
 
   componentDidMount() {
     // Firebase-provided subscriber that allows us to let our app know who's signed in
-    this.unsubscribeFromAuth = auth.onAuthStateChanged( async user => {
-      //we use docRef for CRUD
-      createUserProfileDocument(user);
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot((snapShot) => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+          });
+        });
+      }
+      // If user logs out, we set currentUser to null
+      this.setState({ currentUser: userAuth });
     });
-  };
+  }
 
   componentWillUnmount() {
     this.unsubscribeFromAuth();
-  };
+  }
 
   render() {
     return (
@@ -44,6 +56,6 @@ class App extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default App;
