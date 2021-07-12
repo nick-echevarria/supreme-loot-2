@@ -2,6 +2,8 @@ import React from "react";
 import "./header.styles.scss";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
+// A HOC that lets us modify our component for access to redux
+import { connect } from "react-redux";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
@@ -32,4 +34,12 @@ const Header = ({ currentUser }) => {
   );
 };
 
-export default Header;
+// State being passed in below is root reducer state
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+// We're passing in a function that connects this component to state.
+// This is used anywhere a component needs to know/interact with state.
+// Now, Header receives the initial null value of current user in user-reducer
+export default connect(mapStateToProps)(Header);
