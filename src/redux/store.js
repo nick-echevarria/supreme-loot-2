@@ -8,7 +8,7 @@ import logger from "redux-logger";
 const middlewares = [logger];
 
 // Spreading middlewares value is scalable
-const store = createStore(rootReducer, applyMiddleware(...middlewares));
+export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
 export const persistor = persistStore(store);
 

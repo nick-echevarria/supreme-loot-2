@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartItem = ({ item: { imageUrl, price, name, quantity } }) => {
+export const CartItem = ({ item: { imageUrl, price, name, quantity } }) => {
   return (
     <div className="cart-item">
       <img src={imageUrl} alt="item" />
@@ -14,4 +14,4 @@ const CartItem = ({ item: { imageUrl, price, name, quantity } }) => {
   );
 };
 
-export default CartItem;
+
