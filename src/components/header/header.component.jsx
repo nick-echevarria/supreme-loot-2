@@ -10,7 +10,7 @@ import { createStructuredSelector } from "reselect";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 
-import { ReactComponent as Logo } from "../../assets/crown.svg";
+import { ReactComponent as Logo } from "../../assets/supreme-loot-logo-2.svg";
 
 const Header = ({ currentUser, hidden }) => {
   return (
