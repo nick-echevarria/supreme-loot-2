@@ -5,7 +5,11 @@ import { persistStore } from "redux-persist";
 // Also allows us to familiarize ourselves to what middleware does
 import logger from "redux-logger";
 
-const middlewares = [logger];
+const middlewares = [];
+
+if (process.env.NODE_ENV === "development") {
+  middlewares.push(logger);
+}
 
 // Spreading middlewares value is scalable
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
