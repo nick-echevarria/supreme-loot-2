@@ -26,7 +26,6 @@ const Header = ({ currentUser, hidden }) => {
       </LogoContainer>
       <OptionsContainer>
         <OptionLink to="/shop">SHOP</OptionLink>
-        <OptionLink to="/shop">CONTACT</OptionLink>
         {currentUser ? (
           // Below we see the as='div' prop which allows a styled element to be presented however 
           // we want, allowing a reduction of code
