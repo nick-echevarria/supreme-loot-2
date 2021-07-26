@@ -34,7 +34,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
-
     try {
       await userRef.set({
         displayName,
@@ -43,7 +42,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         ...additionalData,
       });
     } catch (error) {
-      console.log("error creating user");
+      console.log("error creating user", error.message);
     }
   }
 
@@ -77,11 +76,10 @@ export const convertCollectionsSnapshotToMap = (collections) => {
     };
   });
 
-  transformedCollection.reduce((accumulator, collection) => {
+  return transformedCollection.reduce((accumulator, collection) => {
     accumulator[collection.title.toLowerCase()] = collection;
     return accumulator;
   }, {});
-
 };
 
 export default firebase;
