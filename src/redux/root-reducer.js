@@ -8,7 +8,7 @@ import cartReducer from "./cart/cart.reducer";
 import directoryReducer from "./directory/directory.reducer";
 import shopReducer from "./shop/shop.reducer";
 
-// JSON object represeting p[ossible configs for redux-persist
+// JSON object representing possible configs for redux-persist
 const persistConfig = {
   key: "root",
   storage,
