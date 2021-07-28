@@ -11,7 +11,7 @@ import { store, persistor } from "./redux/store";
 
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    <HashRouter basename="/">
       <PersistGate persistor={persistor}>
         <App />
       </PersistGate>
