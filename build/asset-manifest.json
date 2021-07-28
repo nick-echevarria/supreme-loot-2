@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "http://localhost:3000/static/css/main.0068a2d0.chunk.css",
+    "main.js": "http://localhost:3000/static/js/main.f2fcccda.chunk.js",
+    "main.js.map": "http://localhost:3000/static/js/main.f2fcccda.chunk.js.map",
+    "runtime-main.js": "http://localhost:3000/static/js/runtime-main.41dc7db7.js",
+    "runtime-main.js.map": "http://localhost:3000/static/js/runtime-main.41dc7db7.js.map",
+    "static/js/2.655a7b6e.chunk.js": "http://localhost:3000/static/js/2.655a7b6e.chunk.js",
+    "static/js/2.655a7b6e.chunk.js.map": "http://localhost:3000/static/js/2.655a7b6e.chunk.js.map",
+    "index.html": "http://localhost:3000/index.html",
+    "service-worker.js": "http://localhost:3000/service-worker.js",
+    "service-worker.js.map": "http://localhost:3000/service-worker.js.map",
+    "static/css/main.0068a2d0.chunk.css.map": "http://localhost:3000/static/css/main.0068a2d0.chunk.css.map",
+    "static/js/2.655a7b6e.chunk.js.LICENSE.txt": "http://localhost:3000/static/js/2.655a7b6e.chunk.js.LICENSE.txt",
+    "static/media/shopping-bag.a688874f.svg": "http://localhost:3000/static/media/shopping-bag.a688874f.svg",
+    "static/media/supreme-loot-logo-2.3cb4f716.svg": "http://localhost:3000/static/media/supreme-loot-logo-2.3cb4f716.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.41dc7db7.js",
+    "static/js/2.655a7b6e.chunk.js",
+    "static/css/main.0068a2d0.chunk.css",
+    "static/js/main.f2fcccda.chunk.js"
+  ]
+}

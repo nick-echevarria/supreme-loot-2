@@ -56,20 +56,20 @@ class App extends React.Component {
       <div>
         <Header />
         <Switch>
-          <Route path={`${process.env.PUBLIC_URL}/shop`} component={ShopPage} />
-          <Route path={`${process.env.PUBLIC_URL}/checkout`} component={CheckoutPage} />
+          <Route path="/shop" component={ShopPage} />
+          <Route path="/checkout" component={CheckoutPage} />
           <Route
             exact
-            path={`${process.env.PUBLIC_URL}/signin`}
+            path="/signin"
             render={() =>
               this.props.currentUser ? (
-                <Redirect to={`${process.env.PUBLIC_URL}/`} />
+                <Redirect to="/" />
               ) : (
                 <SignInAndSignUpPage />
               )
             }
           />
-          <Route exact path={`${process.env.PUBLIC_URL}/`} component={HomePage} />
+          <Route exact path="/" component={HomePage} />
         </Switch>
       </div>
     );
