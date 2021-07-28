@@ -2,7 +2,7 @@
   "name": "crwn-clothing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://supremeloot.netlify.app",
+  "homepage": "https://supremeloot.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -10,7 +10,6 @@
     "firebase": "^8.7.1",
     "heroku": "^7.56.1",
     "lodash.memoize": "^4.1.2",
-    "netlify-cli": "^5.2.11",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
